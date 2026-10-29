@@ -515,3 +515,4 @@ h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
   .tiles { grid-template-columns: 1fr; min-height: 0; }
   .tile { min-height: 240px; }
 }
+.tile.tile-center { background-position: center 42%; }
