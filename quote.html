@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Quote | ProAv Charters</title>
+  <meta name="description" content="Get a customized private jet charter quote from ProAv Charters. We typically respond within 1 hour.">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <section class="quote-page">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow lined">Request a Quote</span>
+          <h1>Get a Customized<br>Charter Quote.</h1>
+          <p>Tell us about your trip and our team will provide a tailored quote based on your specific needs, itinerary, and aircraft preferences.</p>
+          <ul class="contact-rows">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><strong>Call Us Directly</strong><a href="tel:+13528954188" data-site="phone">(352) 895-4188</a></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><div><strong>Email Us</strong><a href="mailto:charters@proavcharters.com" data-site="email">charters@proavcharters.com</a></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong>Response Time</strong>We typically respond within 1 hour.</div></li>
+          </ul>
+        </div>
+        <form class="form-card reveal" id="quote-form" data-form="Charter Quote Request">
+          <span class="eyebrow">Trip Details</span>
+          <input type="hidden" name="trip_type" value="One Way">
+          <div class="tabs" role="group" aria-label="Trip type">
+            <button type="button" class="tab active" data-type="One Way">One Way</button>
+            <button type="button" class="tab" data-type="Round Trip">Round Trip</button>
+            <button type="button" class="tab" data-type="Multi-City">Multi-City</button>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="from">Departure Airport <span class="req">*</span></label>
+              <input id="from" name="from" type="text" placeholder="e.g. KOCF - Ocala, FL" required>
+            </div>
+            <div class="field">
+              <label for="to">Destination Airport <span class="req">*</span></label>
+              <input id="to" name="to" type="text" placeholder="e.g. KTEB - Teterboro, NJ" required>
+            </div>
+            <div class="field">
+              <label for="date">Departure Date <span class="req">*</span></label>
+              <input id="date" name="departure_date" type="date" required>
+            </div>
+            <div class="field hidden" id="return-field">
+              <label for="return">Return Date <span class="req">*</span></label>
+              <input id="return" name="return_date" type="date">
+            </div>
+            <div class="form-grid full hidden" id="extra-legs" style="gap: 18px;"></div>
+            <button type="button" class="add-leg full hidden" id="add-leg">+ Add Another Leg</button>
+            <div class="field">
+              <label for="pax">Passengers</label>
+              <select id="pax" name="passengers">
+                <option>1 Passenger</option><option>2 Passengers</option><option>3 Passengers</option><option>4 Passengers</option>
+                <option>5 Passengers</option><option>6 Passengers</option><option>7 Passengers</option><option>8 Passengers</option>
+                <option>9-12 Passengers</option><option>13+ Passengers</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="aircraft">Aircraft Preference</label>
+              <select id="aircraft" name="aircraft_preference">
+                <option>No Preference</option><option>Light Jet</option><option>Midsize Jet</option>
+                <option>Super Midsize Jet</option><option>Heavy Jet</option><option>Turboprop</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="name">Full Name <span class="req">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field full">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field full">
+              <label for="details">Additional Details</label>
+              <textarea id="details" name="additional_details" placeholder="Tell us about any specific requirements, timing, or special requests you may have."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top: 22px;">Request Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <div class="form-success" role="status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>
