@@ -27,7 +27,15 @@ const NAV = [
   { href: "/contact", label: "Contact" },
 ];
 
-const LOGO = '<span class="pro">Pro</span><span class="charters">avcharters</span>';
+const LOGO =
+  '<svg class="logo-swoosh" viewBox="0 0 220 26" aria-hidden="true">' +
+  '<path d="M4 23 C 60 9, 140 5, 216 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' +
+  '<path d="M96 12.5 L 118 5.5 L 140 3 C 146 2.6 147 4.4 142 5.6 L 124 9.6 L 112 16 L 107 16 L 113 10.6 L 101 13.4 L 97 16 L 94 16 Z" fill="currentColor"/>' +
+  "</svg>" +
+  '<span class="pro">Proav</span><span class="charters">charters</span>';
+
+const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const PHONE_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>';
 
 function currentPath() {
   let p = location.pathname.replace(/\.html$/, "").replace(/\/index$/, "/");
@@ -48,8 +56,10 @@ function buildHeader() {
       <a href="/" class="logo" aria-label="${SITE.name} home">${LOGO}</a>
       <ul class="nav-links" id="nav-links">
         ${links}
-        <li><a href="/quote" class="btn btn-primary nav-cta">Request a Quote</a></li>
+        <li class="nav-phone"><a href="tel:${SITE.phoneHref}">${PHONE_ICON}${SITE.phone}</a></li>
+        <li><a href="/quote" class="btn btn-primary nav-cta">Request a Quote ${ARROW}</a></li>
       </ul>
+      <a href="tel:${SITE.phoneHref}" class="mobile-call" aria-label="Call ${SITE.phone}">${PHONE_ICON}</a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
