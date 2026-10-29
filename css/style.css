@@ -516,3 +516,5 @@ h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
   .tile { min-height: 240px; }
 }
 .tile.tile-center { background-position: center 42%; }
+.photo-credit { text-align: center; font-size: 0.78rem; color: var(--muted); margin-top: 28px; }
+.photo-credit a { text-decoration: underline; }
