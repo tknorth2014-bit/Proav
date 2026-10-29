@@ -397,9 +397,11 @@ h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
 }
 @media (max-width: 600px) {
   .logo { font-size: 1.55rem; }
-  .filters { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px 28px; padding: 4px 16px; scrollbar-width: none; }
-  .filters::-webkit-scrollbar { display: none; }
-  .filter { flex: 0 0 auto; }
   .tab { min-width: 0; padding: 10px 6px; }
   .contact-rows li { margin-bottom: 20px; }
 }
+
+/* Two-column grid (fleet) */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 920px; margin: 0 auto; }
+.filters { justify-content: center; }
+@media (max-width: 700px) { .grid-2 { grid-template-columns: 1fr; } }

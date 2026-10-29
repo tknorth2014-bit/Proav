@@ -22,7 +22,7 @@ A static, mobile-friendly website for ProAv Charters. It's plain HTML, CSS and J
 - **Menu links, header, footer:** also in `js/main.js` (`NAV`, `buildHeader`, `buildFooter`).
 - **Colors and fonts:** edit the `:root` variables at the top of `css/style.css` (for example `--blue` for the buttons).
 - **Photos:** everything is in `images/`. To swap a photo, replace the file and keep the same name (for example `images/home-hero.jpg`). The starter photos were cut from the design mockup, so they're fairly low resolution. Replace them with full-size originals, ideally at least 1600px wide for hero images, for the sharpest result.
-- **Fleet:** each aircraft is an `<article class="aircraft-card">` in `fleet.html`. Copy one to add a new aircraft. Its `data-category` decides which filter tab it appears under (`light`, `midsize`, `super-midsize`, `heavy`, `turboprop`), and the `data-…` values fill the "View Details" popup. If a category has no aircraft, its tab shows an "Available on request" message.
+- **Fleet:** each aircraft is an `<article class="aircraft-card">` in `fleet.html` (currently the Falcon 2000EX EASy and the Citation XLS). Copy one to add an aircraft. Its `data-category` decides which filter button it appears under (`large` or `midsize`), and the `data-…` values fill the "View Details" popup. The aircraft photos are `images/jet-falcon.jpg` and `images/jet-xls.jpg`. Replace them with real photos of your aircraft.
 - **News:** each post is an `<article class="news-card">` in `news.html`. Copy one, then change the date, title, summary and the paragraphs inside `<details>`.
 
 ## Forms
