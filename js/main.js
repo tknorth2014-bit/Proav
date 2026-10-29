@@ -27,7 +27,7 @@ const NAV = [
   { href: "/contact", label: "Contact" },
 ];
 
-const LOGO = '<span class="pro">Pro</span><span class="av">av</span><span class="charters">charters</span>';
+const LOGO = '<span class="pro">Pro</span><span class="charters">avcharters</span>';
 
 function currentPath() {
   let p = location.pathname.replace(/\.html$/, "").replace(/\/index$/, "/");
@@ -196,8 +196,8 @@ function setupQuoteForm() {
   const setType = (type) => {
     tabs.forEach((t) => t.classList.toggle("active", t.dataset.type === type));
     tripType.value = type;
-    returnField.classList.toggle("hidden", type !== "Round Trip");
     returnField.querySelector("input").required = type === "Round Trip";
+    returnField.querySelector(".req").classList.toggle("hidden", type !== "Round Trip");
     const multi = type === "Multi-City";
     legs.classList.toggle("hidden", !multi);
     addLeg.classList.toggle("hidden", !multi);
