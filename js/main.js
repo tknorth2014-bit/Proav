@@ -295,7 +295,7 @@ function setupFleet() {
         .map((r) => `<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`)
         .join("");
       body.innerHTML = `
-        <img src="${c.querySelector("img").src}" alt="${d.name}">
+        ${c.querySelector("img") ? `<img src="${c.querySelector("img").src}" alt="${d.name}">` : '<div class="img-fallback"></div>'}
         <div class="modal-body">
           <h3>${d.name}</h3>
           <p class="class">${d.class}</p>

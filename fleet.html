@@ -10,13 +10,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Noto+Serif+Display:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <script>function imgFail(e){var d=document.createElement("div");d.className="img-fallback";e.replaceWith(d)}</script>
 </head>
 <body>
   <header id="site-header"></header>
 
   <main>
     <section class="hero short">
-      <div class="hero-media" style="background-image: url('https://images.pexels.com/photos/28281980/pexels-photo-28281980.jpeg?auto=compress&cs=tinysrgb&w=2000'), url('/images/fleet-hero.jpg');"></div>
+      <div class="hero-media" style="background-image: url('https://images.pexels.com/photos/28281980/pexels-photo-28281980.jpeg?auto=compress&cs=tinysrgb&w=2000');"></div>
       <div class="container">
         <div class="hero-inner">
           <span class="eyebrow">Our Fleet</span>
@@ -38,7 +39,7 @@
             data-pax="Up" data-range="3,800 nm" data-speed="470 kts"
             data-cabin="6 ft 2 in" data-baggage="134 cu ft"
             data-desc="A true large-cabin, long-range business jet. The Falcon 2000EX EASy pairs transcontinental range with a wide, stand-up cabin, full galley, and Dassault&rsquo;s advanced EASy flight deck.">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/N785AD_Dassault_Falcon_F.2000EX_Easy_(9074348377).jpg?width=1200" onerror="this.onerror=null;this.src='/images/jet-falcon.jpg'" alt="Dassault Falcon 2000EX EASy" loading="lazy">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/N785AD_Dassault_Falcon_F.2000EX_Easy_(9074348377).jpg?width=1200" onerror="imgFail(this)" alt="Dassault Falcon 2000EX EASy" loading="lazy">
             <div class="body">
               <h3>Dassault Falcon 2000EX EASy</h3>
               <div class="class">Large Cabin Jet</div>
@@ -54,7 +55,7 @@
             data-pax="Up" data-range="1,850 nm" data-speed="433 kts"
             data-cabin="5 ft 8 in" data-baggage="80 cu ft"
             data-desc="A popular midsize jet with a stand-up-height cabin, generous baggage space, and excellent short-field performance, ideal for regional and domestic trips.">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cessna_560XL_Citation_XLS.jpg?width=1200" onerror="this.onerror=null;this.src='/images/jet-xls.jpg'" alt="Citation XLS" loading="lazy">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cessna_560XL_Citation_XLS.jpg?width=1200" onerror="imgFail(this)" alt="Citation XLS" loading="lazy">
             <div class="body">
               <h3>Citation XLS</h3>
               <div class="class">Midsize Jet</div>
@@ -85,7 +86,7 @@
       </div>
     </div>
 
-    <section class="cta-band" style="background-image: url('https://images.pexels.com/photos/10263390/pexels-photo-10263390.jpeg?auto=compress&cs=tinysrgb&w=2000'), url('/images/home-hero.jpg');">
+    <section class="cta-band" style="background-image: url('https://images.pexels.com/photos/10263390/pexels-photo-10263390.jpeg?auto=compress&cs=tinysrgb&w=2000');">
       <div class="container reveal">
         <span class="eyebrow">Ready When You Are</span>
         <h2>Let&rsquo;s Plan Your Next Flight</h2>
